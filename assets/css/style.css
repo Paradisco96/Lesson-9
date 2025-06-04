@@ -1,0 +1,70 @@
+:root {
+  --font-family: "Roboto", sans-serif;
+  --font-weight: 400;
+  --font-size: 16px;
+  --line-height-sm: 1.4;
+  --line-height: 1.64062;
+
+  --container-primery: 1110px;
+
+  --primary-color: #4a90e2;
+  --secondary-color: #50e3c2;
+  --background-color: #f5f7fa;
+  --text-color: #333;
+  --border-color: #e0e0e0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+html {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: var(--line-height-sm);
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: var(--line-height-sm);
+}
+
+.container {
+  width: min(100% - 40px, var(--container-primery));
+  margin-inline: auto;
+}
+
+/* ======================================================================== */
+
+.header {}
+
+.container {}
+
+.navbar {}
+
+.navbar__list {}
+
+.navbar__item {}
+
+.navbar__link {}
+
+.navbar__link--active {}
+
+.hero {}
+
+.hero__title {}
+
+.hero__description {}
+
+.hero__button {}
