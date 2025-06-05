@@ -1,19 +1,34 @@
+/* Variables */
 :root {
   --font-family: "Roboto", sans-serif;
   --font-weight: 400;
   --font-size: 16px;
+
+  --letters-spacing: 0.1em;
+
   --line-height-sm: 1.4;
   --line-height: 1.64062;
 
   --container-primery: 1110px;
+  --container-secondary: 540px;
 
-  --primary-color: #4a90e2;
-  --secondary-color: #50e3c2;
-  --background-color: #f5f7fa;
-  --text-color: #333;
-  --border-color: #e0e0e0;
+  --color-black: #000;
+  --color-primary: #34547a;
+  --color-secondary: #727272;
+  --color-white: #fff;
+  --color-white-silver: #EEEFF1;
+  --color-gray-light: #eeeff1;
+
+  --gap: 20px;
+  --gap-sm: calc(var(--gap) / 2);
+  /* 10px */
+  --gap-lg: calc(var(--gap) * 1.5);
+  /* 30px */
+  --gap-xl: calc(var(--gap) * 2);
+  /* 40px */
 }
 
+/* Typography */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -40,31 +55,198 @@ h2 {
   line-height: var(--line-height-sm);
 }
 
+a {
+  text-decoration: none;
+  color: var(--color-black);
+}
+
+/* Common Classes */
 .container {
-  width: min(100% - 40px, var(--container-primery));
+  width: min(100% - var(--gap-xl), var(--container-primery));
   margin-inline: auto;
 }
 
-/* ======================================================================== */
+.container-sm {
+  width: min(100% - var(--gap-xl), var(--container-secondary));
+  margin-inline: auto;
+}
 
-.header {}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
 
-.container {}
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
-.navbar {}
+/* Blocks */
 
-.navbar__list {}
+.header {
+  background-color: var(--color-gray-light);
+  /* min-height: 700px; */
+  padding-top: 68px;
+  padding-bottom: 141px;
+}
 
-.navbar__item {}
+.navbar {
+  margin-bottom: 142px;
+}
 
-.navbar__link {}
+.navbar__list {
+  display: flex;
+  gap: 25px;
+  margin-left: -0.75em;
+  flex-wrap: wrap;
+}
 
-.navbar__link--active {}
+.navbar__link {
+  display: block;
+  letter-spacing: var(--letters-spacing);
+  padding: 0.5em 0.75em;
+  text-transform: uppercase;
+}
 
-.hero {}
+.navbar__link--active {
+  color: var(--color-primary);
+  font-weight: 500;
+}
 
-.hero__title {}
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: var(--container-secondary);
+}
 
-.hero__description {}
+.hero__title {
+  margin-top: 0;
+  margin-bottom: 39px;
+}
 
-.hero__button {}
+.hero__description {
+  margin-bottom: 58px;
+  color: var(--color-secondary);
+}
+
+.hero__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 225px;
+  min-height: 65px;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  padding: 0.5em;
+  letter-spacing: var(--letters-spacing);
+}
+
+
+/* Main content */
+.about {
+  border-color: var(--color-white-silver);
+}
+
+.about__title {
+  padding-top: 12px;
+}
+
+.about__description {
+  margin-bottom: -10px;
+}
+
+.section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  text-align: center;
+}
+
+.section__title {
+  margin-bottom: 35px;
+}
+
+.section__description {
+  color: var(--color-secondary);
+}
+
+.experience {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.experience__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--gap-xl);
+}
+
+.experience__item {
+  display: flex;
+  gap: var(--gap);
+}
+
+.experience__item-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  line-height: 1;
+}
+
+.experience__item-number {
+  font-weight: 500;
+  font-size: 1.31rem;
+  margin-top: 3px;
+}
+
+.experience__item-picture {
+  order: -1;
+}
+
+.experience__item-image {
+  display: block;
+}
+
+.process {
+  background-color: var(--color-gray-light);
+  padding-bottom: 57px;
+}
+
+.video {
+  background-color: var(--color-gray-light);
+  padding-bottom: 100px;
+}
+
+.video__iframe {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  min-height: 200px;
+}
+
+.footer {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+.footer__title {
+  font-weight: 500;
+  font-size: 1.31rem;
+  margin-bottom: 6px;
+}
+
+.footer__description {
+  font-weight: 400;
+  font-size: 0.81rem;
+}
