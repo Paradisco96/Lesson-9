@@ -1,4 +1,4 @@
-/* Variables */
+/* ================== Variables ================== */
 :root {
   --font-family: "Roboto", sans-serif;
   --font-weight: 400;
@@ -16,7 +16,7 @@
   --color-primary: #34547a;
   --color-secondary: #727272;
   --color-white: #fff;
-  --color-white-silver: #EEEFF1;
+  --color-white-silver: #eeeff1;
   --color-gray-light: #eeeff1;
 
   --gap: 20px;
@@ -28,7 +28,7 @@
   /* 40px */
 }
 
-/* Typography */
+/* ================== Typography ================== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -60,7 +60,7 @@ a {
   color: var(--color-black);
 }
 
-/* Common Classes */
+/* ================== Common Classes ================== */
 .container {
   width: min(100% - var(--gap-xl), var(--container-primery));
   margin-inline: auto;
@@ -89,7 +89,6 @@ a {
 
 .header {
   background-color: var(--color-gray-light);
-  /* min-height: 700px; */
   padding-top: 68px;
   padding-bottom: 141px;
 }
@@ -146,8 +145,7 @@ a {
   letter-spacing: var(--letters-spacing);
 }
 
-
-/* Main content */
+/* ================== Main Content ================== */
 .about {
   border-color: var(--color-white-silver);
 }
@@ -233,6 +231,7 @@ a {
   min-height: 200px;
 }
 
+/* ================== Footer ================== */
 .footer {
   background-color: var(--color-primary);
   color: var(--color-white);
@@ -249,4 +248,157 @@ a {
 .footer__description {
   font-weight: 400;
   font-size: 0.81rem;
+}
+
+/* ================== Responsive Styles ================== */
+@media (992px < width <=1200px) {
+  .experience__container {
+    flex-wrap: nowrap;
+    gap: var(--gap-lg);
+  }
+}
+
+@media (768px < width <=992px) {
+  html {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  .navbar {
+    margin-bottom: 114px;
+  }
+
+  .header {
+    padding-top: 54px;
+    padding-bottom: 124px;
+  }
+
+  .hero__title {
+    margin-bottom: 18px;
+  }
+
+  .hero__description {
+    margin-bottom: 44px;
+  }
+
+  .hero__button {
+    min-width: 185px;
+    min-height: 54px;
+    font-size: 15px;
+  }
+
+  .navbar__link {
+    font-size: 15px;
+  }
+
+  .section {
+    padding-top: 84px;
+    padding-bottom: 84px;
+  }
+
+  .experience {
+    padding-top: 84px;
+    padding-bottom: 84px;
+    display: flex;
+  }
+
+  .experience__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .experience__item {
+    flex: 0 1 calc(33.333% - 13.33px);
+    justify-content: center;
+  }
+
+  .process {
+    padding-bottom: 44px;
+  }
+
+  .video {
+    padding-bottom: 84px;
+  }
+}
+
+
+@media (768px >=width) {
+
+  html {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .header {
+    padding-top: 34px;
+    padding-bottom: 110px;
+  }
+
+  .navbar {
+    margin-bottom: 100px;
+  }
+
+  .hero__title {
+    margin-bottom: 14px;
+  }
+
+  .hero__description {
+    margin-bottom: 34px;
+  }
+
+  .hero__button {
+    min-width: 145px;
+    min-height: 42px;
+    font-size: 14px;
+  }
+
+  .navbar__link {
+    font-size: 14px;
+  }
+
+  .section {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .experience {
+    display: flex;
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .experience__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .experience__item {
+    flex: 0 1 calc(33.333% - 13.33px);
+    justify-content: center;
+  }
+
+  .process {
+    padding-bottom: 34px;
+  }
+
+  .video {
+    padding-bottom: 64px;
+  }
 }
