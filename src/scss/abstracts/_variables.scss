@@ -1,0 +1,30 @@
+@use "sass:math";
+$font-family: "Roboto", sans-serif;
+$font-weight: 400;
+$font-size: 16px;
+$line-height: 1.64062;
+$line-height-sm: 1.4;
+
+$letters-spacing: 0.1em;
+
+$line-height-sm: 1.4;
+$line-height: 1.64062;
+
+$container-primery: 1110px;
+$container-secondary: 540px;
+
+$color-black: #000;
+$color-primary: #34547a;
+$color-secondary: #727272;
+$color-white: #fff;
+$color-white-silver: #eeeff1;
+$color-gray-light: #eeeff1;
+
+$gap-base: 20px;
+$gap-sm: calc($gap-base / 2);
+$gap-lg: $gap-base * 1.5;
+$gap-xl: $gap-base * 2;
+
+$breakpoint-sm: 768px;
+$breakpoint-md: 992px;
+$breakpoint-lg: 1200px;

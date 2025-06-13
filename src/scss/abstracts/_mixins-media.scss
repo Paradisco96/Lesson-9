@@ -1,0 +1,19 @@
+@use "variables" as *;
+
+@mixin desktop {
+  @media (min-width: $breakpoint-md + 1) and (max-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: $breakpoint-sm + 1) and (max-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $breakpoint-sm) {
+    @content;
+  }
+}

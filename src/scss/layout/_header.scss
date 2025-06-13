@@ -1,0 +1,103 @@
+@use "abstracts/variables" as *;
+@use "abstracts/mixins" as *;
+@use "abstracts/mixins-media" as *;
+
+.header {
+  background-color: $color-gray-light;
+  padding-top: 68px;
+  padding-bottom: 141px;
+
+  @include laptop {
+    padding-top: 54px;
+    padding-bottom: 124px;
+  }
+  @include mobile {
+    padding-top: 34px;
+    padding-bottom: 110px;
+  }
+}
+
+.navbar {
+  margin-bottom: 142px;
+  @include mobile {
+    margin-bottom: 100px;
+  }
+
+
+&__list {
+  display: flex;
+  gap: 25px;
+  margin-left: -0.75em;
+  flex-wrap: wrap;
+}
+
+&__link {
+  display: block;
+  letter-spacing: $letters-spacing;
+  padding: 0.5em 0.75em;
+  text-transform: uppercase;
+  @include laptop {
+    font-size: 15px;
+  }
+  @include mobile {
+    font-size: 14px;
+  }
+}
+
+&--active {
+  color: $color-primary;
+  font-weight: 500;
+}
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: $container-secondary;
+
+
+&__title {
+  margin-top: 0;
+  margin-bottom: 39px;
+  @include laptop {
+    margin-bottom: 18px;
+  }
+  @include mobile {
+    margin-bottom: 14px;
+  }
+}
+
+&__description {
+  margin-bottom: 58px;
+  color: $color-secondary;
+  @include laptop {
+    margin-bottom: 44px;
+  }
+  @include mobile {
+    margin-bottom: 34px;
+  }
+}
+
+&__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 225px;
+  min-height: 65px;
+  color: $color-white;
+  background-color: $color-primary;
+  padding: 0.5em;
+  letter-spacing: $letters-spacing;
+  @include laptop {
+    min-width: 185px;
+    min-height: 54px;
+    font-size: 15px;
+  }
+  @include mobile {
+    min-width: 145px;
+    min-height: 42px;
+    font-size: 14px;
+  }
+}
+}

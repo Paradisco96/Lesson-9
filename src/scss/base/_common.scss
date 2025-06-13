@@ -1,0 +1,23 @@
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
+@use 'abstracts/extends' as *;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container{
+  width: min(100% - $gap-xl, $container-primery);
+  margin-inline: auto;
+}
+.container-sm {
+  width: min(100% - $gap-xl, $container-secondary);
+  margin-inline: auto;
+}
+
+.visually-hidden {
+@extend %visually-hidden;
+}

@@ -1,0 +1,22 @@
+@use "abstracts/variables" as *;
+@use "abstracts/mixins" as *;
+@use "abstracts/mixins-media" as *;
+
+.footer {
+  background-color: $color-primary;
+  color: $color-white;
+  padding-top: 45px;
+  padding-bottom: 45px;
+
+
+&__title {
+  font-weight: 500;
+  font-size: 1.31rem;
+  margin-bottom: 6px;
+}
+
+&__description {
+  font-weight: 400;
+  font-size: 0.81rem;
+}
+}

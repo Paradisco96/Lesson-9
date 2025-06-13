@@ -1,0 +1,26 @@
+@use 'variables' as *;
+
+@mixin heading-styles($font-size) {
+  font-size: $font-size;
+  font-weight: 500;
+  line-height: $line-height-sm;
+}
+
+@mixin gradient($direction) {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100px;
+  z-index: 1;
+
+  @if $direction == "left" {
+  left: 0;
+  background: linear-gradient(to left, transparent, $color-gray-light);
+  }
+
+  @else if $direction == "right" {
+  right: 0;
+  background: linear-gradient(to right, transparent, $color-gray-light);
+  }
+}

@@ -1,0 +1,50 @@
+@use "abstracts/variables" as *;
+@use "abstracts/mixins" as *;
+@use "abstracts/mixins-media" as *;
+
+html {
+  font-family: $font-family;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+h1 {
+  @include heading-styles(3rem);
+}
+h2 {
+  @include heading-styles(2rem);
+}
+a {
+  text-decoration: none;
+  color: $color-black;
+}
+
+@include laptop {
+  html {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+}
+
+@include mobile {
+  html {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+}
