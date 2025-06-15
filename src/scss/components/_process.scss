@@ -1,0 +1,38 @@
+@use '../presets' as *;
+@use '../mixins' as *;
+
+.section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  text-align: center;
+  @include laptop {
+    padding-top: 84px;
+    padding-bottom: 84px;
+  }
+
+  @include mobile {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+&__title {
+  margin-bottom: 35px;
+}
+
+&__description {
+  color: $color-secondary;
+}
+}
+
+.process {
+  background-color: $color-gray-light;
+  padding-bottom: 57px;
+
+  @include laptop {
+    padding-bottom: 44px;
+  }
+
+  @include mobile {
+    padding-bottom: 34px;
+  }
+}

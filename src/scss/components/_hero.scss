@@ -1,54 +1,5 @@
-@use "abstracts/variables" as *;
-@use "abstracts/mixins" as *;
-@use "abstracts/mixins-media" as *;
-
-.header {
-  background-color: $color-gray-light;
-  padding-top: 68px;
-  padding-bottom: 141px;
-
-  @include laptop {
-    padding-top: 54px;
-    padding-bottom: 124px;
-  }
-  @include mobile {
-    padding-top: 34px;
-    padding-bottom: 110px;
-  }
-}
-
-.navbar {
-  margin-bottom: 142px;
-  @include mobile {
-    margin-bottom: 100px;
-  }
-
-
-&__list {
-  display: flex;
-  gap: 25px;
-  margin-left: -0.75em;
-  flex-wrap: wrap;
-}
-
-&__link {
-  display: block;
-  letter-spacing: $letters-spacing;
-  padding: 0.5em 0.75em;
-  text-transform: uppercase;
-  @include laptop {
-    font-size: 15px;
-  }
-  @include mobile {
-    font-size: 14px;
-  }
-}
-
-&--active {
-  color: $color-primary;
-  font-weight: 500;
-}
-}
+@use '../presets' as *;
+@use '../mixins' as *;
 
 .hero {
   display: flex;

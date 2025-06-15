@@ -1,0 +1,13 @@
+@use '../presets' as *;
+@use '../mixins' as *;
+
+.about {
+  border-color: $color-white-silver;
+&__title {
+  padding-top: 12px;
+}
+
+&__description {
+  margin-bottom: -10px;
+}
+}

@@ -1,4 +1,4 @@
-@use "variables" as *;
+@use "presets" as *;
 
 @mixin desktop {
   @media (min-width: $breakpoint-md + 1) and (max-width: $breakpoint-lg) {

@@ -1,0 +1,78 @@
+@use '../presets' as *;
+@use '../mixins' as *;
+
+.experience {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: $color-primary;
+  color: $color-white;
+
+  @include laptop {
+    padding-top: 84px;
+    padding-bottom: 84px;
+    display: flex;
+  }
+
+  @include mobile {
+    display: flex;
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+
+&__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: $gap-xl;
+
+  @include desktop {
+    flex-wrap: nowrap;
+    gap: $gap-lg;
+  }
+  @include laptop {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  @include mobile {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+
+&__item {
+  display: flex;
+  gap: $gap-base;
+  @include laptop {
+    flex: 0 1 calc(33.333% - 13.33px);
+    justify-content: center;
+  }
+  @include mobile {
+    flex: 0 1 calc(33.333% - 13.33px);
+    justify-content: center;
+  }
+}
+
+&-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  line-height: 1;
+}
+
+&-number {
+  font-weight: 500;
+  font-size: 1.31rem;
+  margin-top: 3px;
+}
+
+&-picture {
+  order: -1;
+}
+
+&-image {
+  display: block;
+}
+}

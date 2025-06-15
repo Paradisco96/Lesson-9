@@ -1,0 +1,17 @@
+@use '../presets' as *;
+@use '../mixins' as *;
+
+.header {
+  background-color: $color-gray-light;
+  padding-top: 68px;
+  padding-bottom: 141px;
+
+  @include laptop {
+    padding-top: 54px;
+    padding-bottom: 124px;
+  }
+  @include mobile {
+    padding-top: 34px;
+    padding-bottom: 110px;
+  }
+}
